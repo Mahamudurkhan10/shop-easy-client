@@ -11,7 +11,7 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 const Banner = () => {
      const user = true
      return (
-          <div className='container mx-auto'>
+          <div className='container mx-auto mt-5'>
                <Swiper
                     cssMode={true}
                     navigation={true}
