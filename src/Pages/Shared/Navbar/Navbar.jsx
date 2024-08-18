@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
      const navItems = <div className='flex flex-col lg:flex-row'>
           <NavLink to={'/'}><li><a>Home</a></li></NavLink>
-          <NavLink to={'/allProducts'}><li><a>All Products</a></li></NavLink>
+          <NavLink to={'/allProducts'}><li><a> Products</a></li></NavLink>
 
 
      </div>
