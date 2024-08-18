@@ -1,7 +1,9 @@
 import React from 'react';
 import { FaStar } from "react-icons/fa";
+import { NavLink } from 'react-router-dom';
 const Card = ({ product }) => {
      const { name,
+          _id,
           image,
           description,
           price,
@@ -34,7 +36,7 @@ const Card = ({ product }) => {
                          </div>
                          <p className='text-lg font-normal text-yellow-700'> Creation Time : {CreateDate}  </p>
                          <div className='text-center mt-3 '>
-                              <button className="btn btn-primary text-white"> Buy Now </button>
+                             <NavLink to={`/cardDetails/${_id}`}> <button className="btn btn-primary text-white"> Buy Now </button></NavLink>
                          </div>
                     </div>
 

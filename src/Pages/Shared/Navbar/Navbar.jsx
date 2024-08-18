@@ -2,20 +2,23 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import { LuLogOut } from 'react-icons/lu';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = () => {
      const { user, logOut } = useContext(AuthContext)
      console.log(user);
-     const navItems = <div className='flex flex-col lg:flex-row'>
-          <NavLink to={'/'}><li><a>Home</a></li></NavLink>
-          <NavLink to={'/allProducts'}><li><a> Products</a></li></NavLink>
+     const navItems = <div className='flex flex-col text-xl lg:flex-row'>
+          <NavLink className={({ isActive }) => isActive ? 'font-bold text-primary' : 'font-semibold'} to={'/'}> <li><a> Home</a></li></NavLink>
+          <NavLink className={({ isActive }) => isActive ? 'font-bold text-primary' : 'font-semibold'} to={'/allProducts'}> <li><a> Products </a></li></NavLink>
+          <NavLink className={({ isActive }) => isActive ? 'font-bold text-primary' : 'font-semibold'} to={'/contactUs'}> <li><a> Contact Us </a></li></NavLink>
 
 
      </div>
      return (
           <div className=' mt-3 mb-3'>
-               <div className="navbar   container mx-auto ">
+               <div className="navbar  lg:w-[1700px] lg:mx-auto ">
                     <div className="navbar-start">
+
                          <div className="dropdown">
                               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                                    <svg
@@ -37,23 +40,27 @@ const Navbar = () => {
                                    {navItems}
                               </ul>
                          </div>
-                         <a className="btn btn-ghost text-xl">daisyUI</a>
+                         <div>
+                              <Link to={'/'} className="btn btn-ghost text-2xl font-bold text-blue-600">  <FaShoppingCart></FaShoppingCart>    Shop <span className='text-2xl font-bold text-yellow-600'>Easy</span>  </Link>
+                            
+                         </div>
+                         <div className="navbar-end hidden lg:flex">
+                                   <ul className="menu menu-horizontal px-1">
+                                        {navItems}
+                                   </ul>
+                              </div>
                     </div>
-                    <div className="navbar-center hidden lg:flex">
-                         <ul className="menu menu-horizontal px-1">
-                              {navItems}
-                         </ul>
-                    </div>
+
                     <div className="navbar-end">
 
                          {user ?
                               <>
                                    <div className="tooltip" data-tip={user?.displayName || 'not fount'}> <span> <img className="rounded-full size-10 mr-3 border-2 border-red-600" src={user?.photoURL || "https://i.ibb.co/YX7cm4v/bd886d7ccc6f8dd8db17e841233c9656.jpg"} alt="" /> </span></div>
-                                   <button  onClick={() => logOut()} className="btn btn-primary"> <LuLogOut></LuLogOut> LogOUt</button>
+                                   <button onClick={() => logOut()} className="btn btn-primary"> <LuLogOut></LuLogOut> LogOUt</button>
                               </>
                               :
 
-                              <Link to={'/login'}> <button className='btn btn-success'> Login </button> </Link>}
+                              <Link to={'/login'}> <button className='btn px-6  btn-info font-bold text-white'> Login </button> </Link>}
 
                     </div>
                </div>

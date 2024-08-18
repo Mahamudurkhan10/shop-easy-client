@@ -1,5 +1,5 @@
 
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,8 +8,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import { NavLink } from 'react-router-dom';
 const Banner = () => {
-     const user = true
+     const {user} = useContext(AuthContext)
      return (
           <div className='container mx-auto mt-5'>
                <Swiper
@@ -29,7 +31,7 @@ const Banner = () => {
                                    user?<>
                                    <button className='btn  border-b-4 bg-stone-400 uppercase text-white text-2xl font-semibold mt-5 '> WelCome </button>
                                    </>: <>
-                                        <NavLink to={'/login'}><button className='btn btn-outline  border-b-4 btn-error uppercase text-white text-2xl font-semibold mt-5 '> Join Us  </button></NavLink>
+                                        <NavLink to={'/login'}><button className='btn btn-outline  border-b-4 btn-info uppercase text-white text-2xl font-semibold mt-5 '> Join Us  </button></NavLink>
                                    </>
                               }
                          </div></SwiperSlide>
@@ -41,7 +43,7 @@ const Banner = () => {
                                    user ? <>
                                         <button className='btn  border-b-4  bg-slate-500 uppercase text-white text-2xl font-semibold mt-5 '> WelCome </button>
                                    </> : <>
-                                        <NavLink to={'/login'}><button className='btn btn-outline  border-b-4 btn-error uppercase text-white text-2xl font-semibold mt-5 '> Join Us  </button></NavLink>
+                                        <NavLink to={'/login'}><button className='btn btn-outline  border-b-4 btn-info uppercase text-white text-2xl font-semibold mt-5 '> Join Us  </button></NavLink>
                                    </>
                               }
                          </div></SwiperSlide>
@@ -55,7 +57,7 @@ const Banner = () => {
                                    user ? <>
                                         <button className='btn  border-b-4 bg-blue-500 uppercase text-white text-2xl font-semibold mt-5 '> WelCome </button>
                                    </> : <>
-                                        <NavLink to={'/login'}><button className='btn btn-outline  border-b-4 btn-error uppercase text-white text-2xl font-semibold mt-5 '> Join Us  </button></NavLink>
+                                        <NavLink to={'/login'}><button className='btn btn-outline  border-b-4 btn-accent  uppercase  text-2xl font-semibold mt-5 '> Join Us  </button></NavLink>
                                    </>
                               }
                          </div>
