@@ -25,7 +25,7 @@ const Banner = () => {
                >
                      <SwiperSlide><img className=' h-[600px] relative opacity-100 rounded-2xl lg:w-full' src="https://i.ibb.co/S56HXw0/1679638788377.jpg" alt="" />
                          <div className=' text-center   lg:w-4/5 absolute -mt-[400px] '>
-                              <h1 className='lg:text-4xl text-3xl font-extrabold text-yellow-500'>Your One-Stop Tech Shop</h1>
+                              <h1 className='lg:text-4xl text-3xl font-extrabold text-yellow-500'>Your One-Stop Easy Shop</h1>
                               <h1 className='lg:text-xl text-lg   font-semibold text-slate-100 lg:w-3/5 mx-auto'>Your one-stop destination for cutting-edge technology. Explore our curated collection of the latest gadgets and devices. Innovation and convenience, all in one place</h1>
                               {
                                    user?<>
@@ -37,7 +37,7 @@ const Banner = () => {
                          </div></SwiperSlide>
                     <SwiperSlide><img className=' h-[600px] relative opacity-100 rounded-2xl lg:w-full' src="https://i.ibb.co/6gjmRN8/Desktop-2560x2040-3-2160x.webp" alt="" />
                          <div className='text-center lg:w-4/5  absolute -mt-[400px] '>
-                              <h1 className='lg:text-4xl text-3xl   font-extrabold text-yellow-700'>Your One-Stop Tech Shop</h1>
+                              <h1 className='lg:text-4xl text-3xl   font-extrabold text-yellow-700'>Your One-Stop Easy Shop</h1>
                               <h1 className='lg:text-xl text-lg   font-semibold text-slate-50 lg:w-3/5 mx-auto'>Your one-stop destination for cutting-edge technology. Explore our curated collection of the latest gadgets and devices. Innovation and convenience, all in one place</h1>
                               {
                                    user ? <>
@@ -51,7 +51,7 @@ const Banner = () => {
                          <img className=' h-[600px] relative opacity-80 rounded-2xl lg:w-full' src="https://i.ibb.co/85LksVN/1711465034587.jpg" alt="" />
 
                          <div className='text-center lg:w-4/5 absolute -mt-[400px] '>
-                              <h1 className='lg:text-4xl text-3xl   font-extrabold text-yellow-500'>Your One-Stop Tech Shop</h1>
+                              <h1 className='lg:text-4xl text-3xl   font-extrabold text-yellow-500'>Your One-Stop Easy Shop</h1>
                               <h1 className='lg:text-xl text-lg   font-semibold text-slate-900 lg:w-3/5 mx-auto'>Your one-stop destination for cutting-edge technology. Explore our curated collection of the latest gadgets and devices. Innovation and convenience, all in one place</h1>
                               {
                                    user ? <>
