@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
                {
                     path:'/cardDetails/:id',
                     element:<PrivateRoutes><CardDetails></CardDetails></PrivateRoutes>, 
-                    loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+                    loader:({params})=>fetch(`https://shop-easy-server.vercel.app/products/${params.id}`)
                }
           ]
      },

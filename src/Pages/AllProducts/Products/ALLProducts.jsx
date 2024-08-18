@@ -29,7 +29,7 @@ const ALLProducts = () => {
                     sortOrder
                }).toString();
 
-               const response = await fetch(`http://localhost:5000/product?${query}`);
+               const response = await fetch(`https://shop-easy-server.vercel.app/product?${query}`);
                const data = await response.json();
                setProducts(data.products);
                setTotalPages(data.totalPages);
