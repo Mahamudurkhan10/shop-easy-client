@@ -9,6 +9,7 @@ import Login from "../Pages/Shared/Login/Login";
 import SingUp from "../Pages/Shared/SingUp/SingUp";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import CardDetails from "../Pages/AllProducts/ProductsDetails/CardDetails";
+import PrivateRoutes from "./PrivateRoutes";
 export const router = createBrowserRouter([
      {
           path: "/",
@@ -36,7 +37,7 @@ export const router = createBrowserRouter([
                },
                {
                     path:'/cardDetails/:id',
-                    element:<CardDetails></CardDetails>, 
+                    element:<PrivateRoutes><CardDetails></CardDetails></PrivateRoutes>, 
                     loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
                }
           ]

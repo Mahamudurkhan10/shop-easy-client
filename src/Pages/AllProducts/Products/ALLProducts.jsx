@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../../Shared/Card/Card';
+import { Helmet } from 'react-helmet-async';
 
 const ALLProducts = () => {
      const [products, setProducts] = useState([]);
@@ -75,6 +76,9 @@ const ALLProducts = () => {
 
      return (
           <div className="container mx-auto p-4">
+                <Helmet>
+                    <title> Products </title>
+               </Helmet>
                <h1 className="text-5xl font-bold text-center mb-8">Our Products </h1>
 
                {/* Filters */}
