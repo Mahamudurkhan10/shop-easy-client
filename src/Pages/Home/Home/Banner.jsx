@@ -24,7 +24,7 @@ const Banner = () => {
                      <SwiperSlide><img className=' h-[600px] relative opacity-100 rounded-2xl lg:w-full' src="https://i.ibb.co/S56HXw0/1679638788377.jpg" alt="" />
                          <div className=' text-center   lg:w-4/5 absolute -mt-[400px] '>
                               <h1 className='lg:text-4xl text-3xl font-extrabold text-yellow-500'>Your One-Stop Tech Shop</h1>
-                              <h1 className='lg:text-xl text-lg   font-semibold text-slate-900 lg:w-3/5 mx-auto'>Your one-stop destination for cutting-edge technology. Explore our curated collection of the latest gadgets and devices. Innovation and convenience, all in one place</h1>
+                              <h1 className='lg:text-xl text-lg   font-semibold text-slate-100 lg:w-3/5 mx-auto'>Your one-stop destination for cutting-edge technology. Explore our curated collection of the latest gadgets and devices. Innovation and convenience, all in one place</h1>
                               {
                                    user?<>
                                    <button className='btn  border-b-4 bg-stone-400 uppercase text-white text-2xl font-semibold mt-5 '> WelCome </button>
