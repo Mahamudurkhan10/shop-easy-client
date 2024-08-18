@@ -5,7 +5,7 @@ const ALLProducts = () => {
      const [products, setProducts] = useState([]);
      const [page, setPage] = useState(1);
      const [totalPages, setTotalPages] = useState(1);
-     const [limit, setLimit] = useState(10);
+     const [limit, setLimit] = useState(15);
      const [category, setCategory] = useState('');
      const [minPrice, setMinPrice] = useState(0);
      const [maxPrice, setMaxPrice] = useState(1000);
@@ -75,7 +75,7 @@ const ALLProducts = () => {
 
      return (
           <div className="container mx-auto p-4">
-               <h1 className="text-3xl font-bold text-center mb-8">Product List</h1>
+               <h1 className="text-5xl font-bold text-center mb-8">Our Products </h1>
 
                {/* Filters */}
                <div className="mb-8">
@@ -89,11 +89,17 @@ const ALLProducts = () => {
                                    className="p-2 border rounded"
                               >
                                    <option value="">All</option>
-                                   {
-                                        products.map((product) => <>
-                                             <option value={product.category}> {product.category} </option>
-                                        </>)
-                                   }
+                                   <option value="Electronics">Electronics</option>
+                                   <option value="Gaming">Gaming</option>
+                                   <option value="Home Entertainment">Home Entertainment</option>
+                                   <option value="Home Decor">Home Decor</option>
+                                   <option value="Kitchen Appliances">Kitchen Appliances</option>
+                                   <option value="Fitness Equipment">Fitness Equipment</option>
+                                   <option value="Personal Care">Personal Care</option>
+                                   <option value="Home Security">Home Security</option>
+                                   <option value="Wearable Technology">Wearable Technology</option>
+                                   <option value="Audio">Audio</option>
+                                  
                               </select>
                          </div>
 
