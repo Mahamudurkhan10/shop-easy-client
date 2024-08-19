@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 const ContactUs = () => {
   return (
-     <div>
+     <div className='mt-5'>
           <Helmet>
                <title> Contact Us </title>
           </Helmet>
