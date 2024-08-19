@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../../Shared/Card/Card';
 import { Helmet } from 'react-helmet-async';
+import { FaSearch } from 'react-icons/fa';
 
 const ALLProducts = () => {
      const [products, setProducts] = useState([]);
@@ -83,7 +84,7 @@ const ALLProducts = () => {
 
                {/* Filters */}
                <div className="mb-8">
-                    <div className="flex flex-col md:flex-row justify-between items-center">
+                    <div className="flex lg:flex-row flex-col lg:items-center lg:justify-between">
                          {/* Category Filter */}
                          <div className="mb-4 md:mb-0">
                               <label className="mr-2 font-bold">Category:</label>
@@ -128,26 +129,27 @@ const ALLProducts = () => {
                                    value={maxPrice === Infinity ? '' : maxPrice}
                                    onChange={handlePriceChange}
                                    placeholder="Max"
-                                   className="p-2 border rounded"
+                                   className="p-2 mt-3 lg:ml-0 ml-[103px] border rounded"
                               />
                          </div>
 
                          {/* Search Filter */}
-                         <div>
+                         <div className='flex  items-center gap-2'>
+                              <FaSearch></FaSearch>
                               <input
                                    type="text"
                                    value={searchQuery}
                                    onChange={handleSearchChange}
                                    placeholder="Search products..."
-                                   className="p-2 border rounded w-full md:w-64"
+                                   className="p-2 border mt-1 rounded w-full md:w-64"
                               />
                          </div>
                          <div>
-                              <label className="mr-2 font-bold">Sort By:</label>
+                              <label className="mr-2  font-bold">Sort By:</label>
                               <select
                                    value={sortOrder}
                                    onChange={handleSortChange}
-                                   className="p-2 border rounded"
+                                   className="p-2 mt-4 border rounded"
                               >
                                    <option value="">Default</option>
                                    <option value="price-desc">Price: High to Low</option>
