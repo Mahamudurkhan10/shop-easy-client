@@ -10,6 +10,7 @@ import SingUp from "../Pages/Shared/SingUp/SingUp";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import CardDetails from "../Pages/AllProducts/ProductsDetails/CardDetails";
 import PrivateRoutes from "./PrivateRoutes";
+
 export const router = createBrowserRouter([
      {
           path: "/",
@@ -20,26 +21,29 @@ export const router = createBrowserRouter([
                     element: <Home></Home>
                },
                {
-                    path:'/allProducts',
+                    path: '/allProducts',
                     element: <ALLProducts></ALLProducts>
                },
                {
-                    path:'/login',
-                    element:<Login></Login>
+                    path: '/login',
+                    element: <Login></Login>
                },
                {
-                    path:'/SingUp',
+                    path: '/SingUp',
                     element: <SingUp></SingUp>
                },
                {
-                    path:'/contactUs',
+                    path: '/contactUs',
                     element: <ContactUs></ContactUs>
                },
                {
-                    path:'/cardDetails/:id',
-                    element:<PrivateRoutes><CardDetails></CardDetails></PrivateRoutes>, 
-                    loader:({params})=>fetch(`https://shop-easy-server.vercel.app/products/${params.id}`)
-               }
+                    path: '/cardDetails/:id',
+                    element: <PrivateRoutes><CardDetails></CardDetails></PrivateRoutes>,
+                    loader: ({ params }) => fetch(`https://shop-easy-server.vercel.app/products/${params.id}`)
+               },
+
+              
+
           ]
      },
 ]);

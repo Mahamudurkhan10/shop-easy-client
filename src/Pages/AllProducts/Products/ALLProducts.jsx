@@ -76,7 +76,7 @@ const ALLProducts = () => {
 
      return (
           <div className="container mx-auto p-4">
-                <Helmet>
+               <Helmet>
                     <title> Products </title>
                </Helmet>
                <h1 className="text-5xl font-bold text-center mb-8">Our Products </h1>
@@ -103,7 +103,11 @@ const ALLProducts = () => {
                                    <option value="Home Security">Home Security</option>
                                    <option value="Wearable Technology">Wearable Technology</option>
                                    <option value="Audio">Audio</option>
-                                  
+                                   <option value="Home Appliances">Home Appliances</option>
+                                   <option value="Office Supplies">Office Supplies</option>
+                                   <option value="Home Automation">Home Automation
+                                   </option>
+
                               </select>
                          </div>
 

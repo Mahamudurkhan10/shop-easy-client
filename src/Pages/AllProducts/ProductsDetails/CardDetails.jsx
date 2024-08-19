@@ -3,7 +3,7 @@ import { NavLink, useLoaderData } from "react-router-dom";
 
 const CardDetails = () => {
      const product = useLoaderData();
-     
+      console.log(product);
      const { name,
           _id,
           image,

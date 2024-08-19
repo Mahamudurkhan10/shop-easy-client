@@ -15,8 +15,8 @@ const Card = ({ product }) => {
           <div>
                <div className="flex flex-col   bg-white border shadow-sm rounded-xl">
                     <img
-                         className="w-full h-auto rounded-t-xl"
-                         src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80"
+                         className="w-full h-[200px] rounded-t-xl"
+                         src={image}
                          alt="Card Image"
                     />
                     <div className="p-4 md:p-5">
@@ -37,6 +37,7 @@ const Card = ({ product }) => {
                          <p className='text-lg font-normal text-yellow-700'> Creation Time : {CreateDate}  </p>
                          <div className='text-center mt-3 '>
                              <NavLink to={`/cardDetails/${_id}`}> <button className="btn btn-primary text-white"> Buy Now </button></NavLink>
+                             <NavLink to={`/cardDetails/${_id}`}> <button className="btn btn-error text-white"> View Details </button></NavLink>
                          </div>
                     </div>
 
